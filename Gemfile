@@ -41,6 +41,22 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.13'
+  # Helpful gems
+  gem "better_errors" # improves error handling
+  gem "binding_of_caller" # used by better errors
+
+  # Testing frameworks
+  gem 'rspec-rails' # testing framework
+  gem "factory_girl_rails" # use factories, not fixtures
+  gem "capybara" # simulate browser activity
+  gem "fakeweb"
+
+  # Automated testing
+  gem 'guard' # automated execution of test suite upon change
+  gem "guard-rspec" # guard integration with rspec
+
+  # Only install the rb-fsevent gem if on Max OSX
+  gem 'rb-fsevent' # used for Growl notifications
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
